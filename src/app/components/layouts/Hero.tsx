@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-yellow-300 rounded-full animate-pulse"></div>
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
           <div className="text-left animate-fade-in">
