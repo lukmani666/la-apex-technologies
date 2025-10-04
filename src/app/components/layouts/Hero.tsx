@@ -22,14 +22,14 @@ const Hero = () => {
               <span className="text-emerald-400 font-semibold">Next-Gen Technology Solutions</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-scale-in">
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight animate-scale-in">
               Innovative Tech Solutions for a{' '}
               <span className="bg-gradient-to-r from-emerald-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
                 Smarter Future
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl leading-relaxed animate-fade-in delay-300">
+            <p className="text-base md:text-xl text-gray-300 mb-12 max-w-2xl leading-relaxed animate-fade-in delay-300">
               Empowering businesses through software development, data intelligence, and automation.
             </p>
             

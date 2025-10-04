@@ -34,12 +34,12 @@ const About = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-6 animate-scale-in">
               About <span className="text-emerald-600">L.A. Apex</span>
             </h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-300">
+            <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-300">
               Founded with a vision to transform businesses through innovative technology solutions, 
               L.A. Apex Technologies stands at the forefront of digital transformation. We combine 
               cutting-edge expertise with personalized service to deliver results that exceed expectations.
             </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-500">
+            <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-500">
               Our mission is to empower organizations with the tools and insights they need to thrive 
               in an increasingly digital world, while building lasting partnerships based on trust and excellence.
             </p>
@@ -60,7 +60,7 @@ const About = () => {
                     >
                       <IconComponent className={`w-6 h-6 ${colorClasses.text}`} />
                     </div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                    <h3 className="font-semibold text-base text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
                       {item.text}
                     </h3>
                   </div>

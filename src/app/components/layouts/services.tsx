@@ -56,7 +56,7 @@ const Services = () => {
           <h2 className="text-4xl font-bold text-white mb-4 animate-scale-in">
             Our <span className="text-emerald-400">Services</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
             Comprehensive technology solutions tailored to your business needs
           </p>
         </div>
