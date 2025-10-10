@@ -114,10 +114,10 @@ const Statistics = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-white mb-4 animate-scale-in">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 animate-scale-in">
             Our <span className="text-emerald-400">Achievements</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
+          <p className="text-base text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
             Numbers that speak for our excellence and commitment to delivering outstanding results
           </p>
         </div>
@@ -150,7 +150,7 @@ const Statistics = () => {
                       {stat.suffix}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
+                  <h3 className="text-sm font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
                     {stat.label}
                   </h3>
                 </div>

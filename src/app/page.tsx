@@ -2,7 +2,6 @@ import About from './components/layouts/about';
 import CaseStudies from './components/layouts/casestudies';
 import Contact from './components/layouts/contact';
 import CTABanner from './components/layouts/ctabanner';
-import Footer from './components/layouts/footer';
 import Hero from './components/layouts/Hero';
 import Services from './components/layouts/services';
 import Statistics from './components/layouts/statistics';
@@ -21,7 +20,6 @@ export default function Home() {
       <Testimonials />
       <CTABanner />
       <Contact />
-      <Footer />
     </div>
   );
 };

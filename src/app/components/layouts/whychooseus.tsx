@@ -37,10 +37,10 @@ const WhyChooseUs = () => {
       
       <div className="mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-white mb-4 animate-scale-in">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 animate-scale-in">
             Why Choose <span className="text-yellow-400">L.A. Apex?</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
+          <p className="text-base text-gray-300 max-w-3xl mx-auto animate-fade-in delay-300">
             We deliver exceptional results through proven methodologies and unwavering commitment to excellence
           </p>
         </div>
@@ -64,7 +64,7 @@ const WhyChooseUs = () => {
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-base leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -87,10 +87,10 @@ const WhyChooseUs = () => {
                     <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold mb-2 group-hover:bg-emerald-400 group-hover:scale-110 transition-all duration-300">
                       {step.number}
                     </div>
-                    <span className="text-gray-300 group-hover:text-emerald-400 transition-colors duration-300">{step.text}</span>
+                    <span className="text-gray-300 text-sm group-hover:text-emerald-400 transition-colors duration-300">{step.text}</span>
                   </div>
                   {index < 3 && (
-                    <div className="hidden md:block w-8 h-0.5 bg-emerald-500 relative overflow-hidden">
+                    <div className="block w-8 h-0.5 bg-emerald-500 relative overflow-hidden">
                       <div className="absolute inset-0 bg-emerald-400 transform -translate-x-full animate-slide-in-right"></div>
                     </div>
                   )}

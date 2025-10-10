@@ -42,10 +42,10 @@ const CaseStudies = () => {
     <section id="case-studies" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Success <span className="text-emerald-600">Stories</span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-base text-gray-700 max-w-3xl mx-auto">
             Real results from our partnerships with forward-thinking companies
           </p>
         </div>
@@ -56,7 +56,7 @@ const CaseStudies = () => {
             <div
               key={index}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl 
-                        transition-all duration-300 transform hover:scale-105 group h-full flex flex-col"
+                        transition-all duration-300 transform hover:scale-100 group h-full flex flex-col"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -73,24 +73,24 @@ const CaseStudies = () => {
 
               {/* flex-1 lets this section grow and push the button down */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-base text-gray-600 mb-4 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="bg-emerald-50 p-3 rounded-lg mb-4">
-                  <span className="text-emerald-700 font-semibold">Result: </span>
-                  <span className="text-emerald-600">{project.result}</span>
+                  <span className="text-base text-emerald-700 font-semibold">Result: </span>
+                  <span className="text-base text-emerald-600">{project.result}</span>
                 </div>
 
-                <Button 
+                {/* <Button 
                   variant="outline" 
-                  className="mt-auto border-emerald-500 bg-white text-emerald-600 
+                  className="mt-auto cursor-pointer border-emerald-500 bg-white text-emerald-600 
                             hover:bg-emerald-500 hover:text-white transition-all duration-300 w-full"
                 >
                   View Project
-                </Button>
+                </Button> */}
               </div>
             </div>
           ))}

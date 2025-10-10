@@ -12,16 +12,16 @@ const CTABanner = () => {
       </div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
           Let's Build Something Amazing Together
         </h2>
-        <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+        <p className="text-base text-white/90 mb-8 max-w-3xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
           Let's discuss how we can help you achieve your goals.
         </p>
         <Button 
           size="lg" 
-          className="bg-gray-900 cursor-pointer text-white hover:bg-gray-800 px-12 py-6 text-lg font-bold transform hover:scale-105 transition-all duration-300 shadow-xl"
+          className="bg-gray-900 cursor-pointer text-white hover:bg-gray-800 px-12 py-6 text-base font-bold transform hover:scale-105 transition-all duration-300 shadow-xl"
         >
           Schedule a Consultation
         </Button>

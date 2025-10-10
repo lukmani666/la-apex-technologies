@@ -39,10 +39,10 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 bg-gradient-to-br from-gray-900 to-emerald-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
             What Our <span className="text-yellow-400">Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it - hear from the companies we've helped transform
           </p>
         </div>
@@ -64,7 +64,7 @@ const Testimonials = () => {
                         <p className="text-emerald-400">{testimonial.role}</p>
                       </div>
                     </div>
-                    <blockquote className="text-gray-300 text-lg leading-relaxed italic">
+                    <blockquote className="text-gray-300 text-base leading-relaxed italic">
                       "{testimonial.testimonial}"
                     </blockquote>
                     <div className="flex mt-4">

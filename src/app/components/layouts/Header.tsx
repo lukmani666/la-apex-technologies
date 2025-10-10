@@ -29,28 +29,28 @@ const Header = () => {
         </Link>
         
         <nav className="hidden lg:flex items-center space-x-8">
-          <a href="#home" className="text-gray-300 hover:text-emerald-400 transition-colors">Home</a>
+          <a href="/" className="text-gray-300 hover:text-emerald-400 transition-colors">Home</a>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-300 hover:text-emerald-400 bg-transparent">
+                <NavigationMenuTrigger className="text-base cursor-pointer text-gray-300 hover:text-emerald-400 bg-transparent">
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-gray-800 border border-gray-700">
                   <div className="p-4 w-64">
-                    <a href="#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Software Development</a>
-                    <a href="#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Data Science</a>
-                    <a href="#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Automation</a>
-                    <a href="#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Tech Consulting</a>
+                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Software Development</Link>
+                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Data Science</Link>
+                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Automation</Link>
+                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Tech Consulting</Link>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <a href="#about" className="text-gray-300 hover:text-emerald-400 transition-colors">About</a>
-          <a href="#case-studies" className="text-gray-300 hover:text-emerald-400 transition-colors">Case Studies</a>
-          <a href="#testimonials" className="text-gray-300 hover:text-emerald-400 transition-colors">Testimonials</a>
-          <a href="#contact" className="text-gray-300 hover:text-emerald-400 transition-colors">Contact</a>
+          <Link href="/#about" className="text-gray-300 hover:text-emerald-400 transition-colors">About</Link>
+          <Link href="/#case-studies" className="text-gray-300 hover:text-emerald-400 transition-colors">Case Studies</Link>
+          <Link href="/#testimonials" className="text-gray-300 hover:text-emerald-400 transition-colors">Testimonials</Link>
+          <Link href="/#contact" className="text-gray-300 hover:text-emerald-400 transition-colors">Contact</Link>
         </nav>
 
         <Button className="hidden cursor-pointer lg:block bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold hover:from-emerald-600 hover:to-yellow-600">
@@ -70,10 +70,26 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 border-t border-gray-700">
+        <div className="lg:hidden bg-gray-800 border-t border-gray-700">
           <nav className="flex flex-col space-y-4 p-4">
             <a href="#home" className="text-gray-300 hover:text-emerald-400">Home</a>
-            <a href="#services" className="text-gray-300 hover:text-emerald-400">Services</a>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-base cursor-pointer text-gray-300 hover:text-emerald-400 bg-transparent">
+                    Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-gray-800 border border-gray-700">
+                    <div className="p-4 w-64">
+                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Software Development</Link>
+                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Data Science</Link>
+                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Automation</Link>
+                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Tech Consulting</Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             <a href="#about" className="text-gray-300 hover:text-emerald-400">About</a>
             <a href="#case-studies" className="text-gray-300 hover:text-emerald-400">Case Studies</a>
             <a href="#testimonials" className="text-gray-300 hover:text-emerald-400">Testimonials</a>

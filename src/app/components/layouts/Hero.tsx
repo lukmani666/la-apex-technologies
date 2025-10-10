@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from '@/app/components/ui/button';
 import { ArrowDown, Play, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -14,7 +16,7 @@ const Hero = () => {
       </div>
       
       <div className="mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-15 lg:py-0 items-center">
           {/* Left side - Text content */}
           <div className="text-left animate-fade-in">
             <div className="flex items-center mb-6 animate-slide-in-left">
@@ -29,35 +31,41 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-base md:text-xl text-gray-300 mb-12 max-w-2xl leading-relaxed animate-fade-in delay-300">
+            <p className="text-base text-gray-300 mb-12 max-w-2xl leading-relaxed animate-fade-in delay-300">
               Empowering businesses through software development, data intelligence, and automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 animate-fade-in delay-500">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold px-8 py-6 text-lg hover:from-emerald-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl group"
-              >
-                <Play className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                Request a Demo
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-emerald-500 text-emerald-400 bg-white hover:bg-emerald-500 hover:text-black px-8 py-6 text-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
-              >
-                Explore Services
-              </Button>
+              <Link href="/request-demo">
+                <Button 
+                  size="lg" 
+                  className="cursor-pointer bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold px-8 py-6 text-sm hover:from-emerald-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl group"
+                >
+                  <Play className="w-5 h-5 mr-2 group-hover:animate-pulse" />
+                  Request a Demo
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-emerald-500 cursor-pointer text-emerald-400 bg-white hover:bg-emerald-500 hover:text-white px-8 py-6 text-sm transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+                >
+                  Explore Services
+                </Button>
+              </Link>
             </div>
           </div>
           
           {/* Right side - Tech person image */}
           <div className="relative animate-fade-in delay-700">
-            <div className="relative group">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            <div className="relative w-full h-[50vh] md:h-[80vh] lg:h-[90vh] group">
+              <Image
+                src="/pic3.jpg" 
                 alt="African tech professional working with laptop" 
-                className="rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500"
+                fill
+                className="rounded-2xl shadow-2xl transform group-hover:scale-100 transition-all duration-500"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-2xl group-hover:opacity-0 transition-opacity duration-500"></div>
               

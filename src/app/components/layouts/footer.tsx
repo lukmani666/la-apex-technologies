@@ -1,3 +1,4 @@
+"use client"
 
 import React from 'react';
 import { Input } from '@/app/components/ui/input';
@@ -45,11 +46,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-emerald-400">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-gray-400 hover:text-emerald-400 transition-colors">Services</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About Us</a></li>
-              <li><a href="#case-studies" className="text-gray-400 hover:text-emerald-400 transition-colors">Case Studies</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-emerald-400 transition-colors">Testimonials</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+              <li><Link href="/#services" className="text-gray-400 hover:text-emerald-400 transition-colors">Services</Link></li>
+              <li><Link href="/#about" className="text-gray-400 hover:text-emerald-400 transition-colors">About Us</Link></li>
+              <li><Link href="/#case-studies" className="text-gray-400 hover:text-emerald-400 transition-colors">Case Studies</Link></li>
+              <li><Link href="/#testimonials" className="text-gray-400 hover:text-emerald-400 transition-colors">Testimonials</Link></li>
+              <li><Link href="/#contact" className="text-gray-400 hover:text-emerald-400 transition-colors">Contact</Link></li>
             </ul>
           </div>
           

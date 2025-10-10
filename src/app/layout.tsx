@@ -49,6 +49,7 @@ import "./globals.css";
 
 import Header from "./components/layouts/Header";
 import Providers from "./providers"; // 👈 we'll create this
+import Footer from "./components/layouts/footer";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -73,6 +74,7 @@ export default function RootLayout({
         <Providers>
           <main>{children}</main>
         </Providers>
+        <Footer />
       </body>
     </html>
   );

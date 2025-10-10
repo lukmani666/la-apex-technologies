@@ -31,15 +31,15 @@ const About = () => {
       <div className="mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 animate-fade-in">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 animate-scale-in">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 animate-scale-in">
               About <span className="text-emerald-600">L.A. Apex</span>
             </h2>
-            <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-300">
+            <p className="text-base text-gray-700 mb-6 leading-relaxed animate-fade-in delay-300">
               Founded with a vision to transform businesses through innovative technology solutions, 
               L.A. Apex Technologies stands at the forefront of digital transformation. We combine 
               cutting-edge expertise with personalized service to deliver results that exceed expectations.
             </p>
-            <p className="text-base md:text-lg text-gray-700 mb-6 leading-relaxed animate-fade-in delay-500">
+            <p className="text-base text-gray-700 mb-6 leading-relaxed animate-fade-in delay-500">
               Our mission is to empower organizations with the tools and insights they need to thrive 
               in an increasingly digital world, while building lasting partnerships based on trust and excellence.
             </p>
@@ -52,7 +52,7 @@ const About = () => {
                 return (
                   <div
                     key={item.text}
-                    className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 group animate-fade-in"
+                    className="text-center p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-100 group animate-fade-in"
                     style={{ animationDelay: `${600 + index * 100}ms` }}
                   >
                     <div
@@ -60,7 +60,7 @@ const About = () => {
                     >
                       <IconComponent className={`w-6 h-6 ${colorClasses.text}`} />
                     </div>
-                    <h3 className="font-semibold text-base text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
+                    <h3 className="font-semibold text-sm text-gray-900 group-hover:text-emerald-600 transition-colors duration-300">
                       {item.text}
                     </h3>
                   </div>
@@ -69,12 +69,13 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 animate-fade-in delay-700">
-            <div className="relative group">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+          <div className="w-full lg:w-1/2 animate-fade-in delay-700">
+            <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] group">
+              <Image
+                src="/pic1.jpg"
                 alt="African tech professional working in modern office" 
-                className="rounded-lg shadow-xl transform group-hover:scale-105 transition-all duration-500"
+                fill
+                className="rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-lg group-hover:opacity-0 transition-opacity duration-500"></div>
               {/* Floating elements */}

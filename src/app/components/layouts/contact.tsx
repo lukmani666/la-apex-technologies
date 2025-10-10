@@ -51,8 +51,8 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <Tabs defaultValue="contact" className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8 bg-gray-800">
-              <TabsTrigger value="contact" className="data-[state=active]:bg-emerald-600">Contact Form</TabsTrigger>
-              <TabsTrigger value="info" className="data-[state=active]:bg-emerald-600">Contact Info</TabsTrigger>
+              <TabsTrigger value="contact" className="cursor-pointer data-[state=active]:bg-emerald-600">Contact Form</TabsTrigger>
+              <TabsTrigger value="info" className="cursor-pointer data-[state=active]:bg-emerald-600">Contact Info</TabsTrigger>
             </TabsList>
             
             <TabsContent value="contact" className="space-y-6">
@@ -116,7 +116,7 @@ const Contact = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="cursor-pointer w-full bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold py-6 text-lg hover:from-emerald-600 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300"
+                  className="cursor-pointer w-full bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold py-6 text-base hover:from-emerald-600 hover:to-yellow-600 transform hover:scale-100 transition-all duration-300"
                 >
                   Send Message
                 </Button>
@@ -131,21 +131,21 @@ const Contact = () => {
                       <Mail className="text-emerald-600" size={24} />
                     </div>
                     <h3 className="text-white font-bold mb-2">Email</h3>
-                    <p className="text-gray-300">contact@laapex.tech</p>
+                    <p className="text-gray-300">contact@laapextechnologies.tech</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Phone className="text-yellow-600" size={24} />
                     </div>
                     <h3 className="text-white font-bold mb-2">Phone</h3>
-                    <p className="text-gray-300">(555) 123-APEX</p>
+                    <p className="text-gray-300">(+234) 805-4325-762</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <MapPin className="text-emerald-600" size={24} />
                     </div>
                     <h3 className="text-white font-bold mb-2">Office</h3>
-                    <p className="text-gray-300">Los Angeles, CA</p>
+                    <p className="text-gray-300">Osogbo, Osun State</p>
                   </div>
                 </div>
                 
