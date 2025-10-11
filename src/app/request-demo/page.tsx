@@ -79,7 +79,7 @@ const RequestDemo = () => {
                 Request a <span className="bg-gradient-to-r from-emerald-400 to-yellow-400 bg-clip-text text-transparent">Demo</span>
               </h1>
               <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-                See how our innovative solutions can transform your business. Fill out the form below and we'll schedule a personalized demo.
+                See how our innovative solutions can transform your business. Fill out the form below and we&apos;ll schedule a personalized demo.
               </p>
             </div>
 

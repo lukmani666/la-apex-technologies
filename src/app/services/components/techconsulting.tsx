@@ -71,7 +71,7 @@ const TechConsulting = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 From technology strategy and architecture design to security audits and team training, we cover all aspects of 
-                technology consulting. We don't just recommend solutions – we partner with you to understand your unique challenges 
+                technology consulting. We don&apos;t just recommend solutions – we partner with you to understand your unique challenges 
                 and goals, then develop strategies that align technology investments with business objectives.
               </p>
             </div>
@@ -109,7 +109,7 @@ const TechConsulting = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready for Expert Guidance?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's discuss your technology challenges and opportunities
+                Let&apos;s discuss your technology challenges and opportunities
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">

@@ -71,7 +71,7 @@ const DataScience = () => {
                 actionable intelligence.
               </p>
               <p className="text-base text-muted-foreground leading-relaxed">
-                Whether you're looking to predict customer behavior, optimize operations, or discover new opportunities, our 
+                Whether you&apos;re looking to predict customer behavior, optimize operations, or discover new opportunities, our 
                 data science experts can help. We work with data of all sizes and complexities, from traditional databases to 
                 big data platforms, ensuring you get the most value from your information assets.
               </p>
@@ -110,7 +110,7 @@ const DataScience = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Harness Your Data?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's turn your data into your competitive advantage
+                Let&apos;s turn your data into your competitive advantage
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">

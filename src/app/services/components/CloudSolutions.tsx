@@ -68,7 +68,7 @@ const CloudSolutions = () => {
               <h2 className="text-2xl md:text-4xl font-bold mb-6">Embrace The Power of Cloud Computing</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
                 Cloud computing has revolutionized how businesses operate, offering unprecedented scalability, reliability, and 
-                cost-efficiency. Whether you're looking to migrate existing applications to the cloud, build cloud-native solutions, 
+                cost-efficiency. Whether you&apos;re looking to migrate existing applications to the cloud, build cloud-native solutions, 
                 or optimize your current cloud infrastructure, we have the expertise to guide you through every step of your cloud 
                 journey.
               </p>
@@ -112,7 +112,7 @@ const CloudSolutions = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Move to the Cloud?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's discuss how cloud solutions can transform your business
+                Let&apos;s discuss how cloud solutions can transform your business
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">

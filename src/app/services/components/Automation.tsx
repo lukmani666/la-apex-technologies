@@ -111,7 +111,7 @@ const Automation = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Automate Your Workflows?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's identify opportunities to streamline your processes
+                Let&apos;s identify opportunities to streamline your processes
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">

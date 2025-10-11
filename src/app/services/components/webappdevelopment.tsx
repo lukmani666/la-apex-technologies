@@ -65,7 +65,7 @@ const WebAppDevelopment = () => {
             <div className="mb-16">
               <h2 className="text-2xl md:text-4xl font-bold mb-6">Create Stunning Digital Experiences</h2>
               <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                In today's digital-first world, your online presence is crucial. We create beautiful, high-performing websites and 
+                In today&apos;s digital-first world, your online presence is crucial. We create beautiful, high-performing websites and 
                 mobile applications that not only look great but also deliver exceptional user experiences. Our development approach 
                 combines aesthetics with functionality, ensuring your digital products stand out in a crowded marketplace.
               </p>
@@ -109,7 +109,7 @@ const WebAppDevelopment = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Build Your Digital Presence?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's create a web or mobile experience that your users will love
+                Let&apos;s create a web or mobile experience that your users will love
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">
