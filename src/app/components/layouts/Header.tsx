@@ -29,7 +29,7 @@ const Header = () => {
         </Link>
         
         <nav className="hidden lg:flex items-center space-x-8">
-          <a href="/" className="text-gray-300 hover:text-emerald-400 transition-colors">Home</a>
+          <Link href="/" className="text-gray-300 hover:text-emerald-400 transition-colors">Home</Link>
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>

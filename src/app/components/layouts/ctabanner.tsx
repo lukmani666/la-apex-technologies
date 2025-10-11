@@ -13,11 +13,11 @@ const CTABanner = () => {
       
       <div className="container mx-auto px-4 text-center relative z-10">
         <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
-          Let's Build Something Amazing Together
+          Let&apos;s Build Something Amazing Together
         </h2>
         <p className="text-base text-white/90 mb-8 max-w-3xl mx-auto">
           Ready to transform your business with cutting-edge technology? 
-          Let's discuss how we can help you achieve your goals.
+          Let&apos;s discuss how we can help you achieve your goals.
         </p>
         <Button 
           size="lg" 

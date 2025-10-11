@@ -109,7 +109,7 @@ const SoftwareDevelopment = () => {
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
               <p className="text-base text-muted-foreground mb-8">
-                Let's discuss how we can help you build the perfect software solution
+                Let&apos;s discuss how we can help you build the perfect software solution
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link href="/request-demo">
