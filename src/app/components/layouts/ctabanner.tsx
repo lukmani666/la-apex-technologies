@@ -1,8 +1,12 @@
-
+'use client'
 import React from 'react';
 import { Button } from '@/app/components/ui/button';
 
 const CTABanner = () => {
+  const handleScheduleCall = () => {
+    // replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
+    window.open('https://calendly.com', '_blank');
+  };
   return (
     <section className="py-20 bg-gradient-to-r from-emerald-600 to-yellow-500 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20">
@@ -20,6 +24,7 @@ const CTABanner = () => {
           Let&apos;s discuss how we can help you achieve your goals.
         </p>
         <Button 
+          onClick={handleScheduleCall}
           size="lg" 
           className="bg-gray-900 cursor-pointer text-white hover:bg-gray-800 px-12 py-6 text-base font-bold transform hover:scale-105 transition-all duration-300 shadow-xl"
         >

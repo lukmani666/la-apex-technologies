@@ -1,4 +1,5 @@
-import React from "react"
+"use client"
+import React, { useState } from "react"
 import { 
   Carousel,
   CarouselContent,
@@ -9,6 +10,7 @@ import {
 import Image from "next/image";
 
 const Testimonials = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -60,7 +62,8 @@ const Testimonials = () => {
                           src={testimonial.image}
                           alt={testimonial.name}
                           fill
-                          className="rounded-full object-cover"
+                          onLoad={() => setIsLoaded(true)}
+                          className={`rounded-full object-cover ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
                         />
                       </div>
                       <div>
@@ -80,8 +83,27 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="text-emerald-400 border-emerald-400 hover:bg-emerald-400 hover:text-black" />
-            <CarouselNext className="text-emerald-400 border-emerald-400 hover:bg-emerald-400 hover:text-black" />
+            <CarouselPrevious
+              className="
+                hidden lg:flex items-center justify-center
+                text-emerald-400 border border-emerald-400
+                hover:bg-emerald-400 hover:text-black
+                rounded-full
+                transition-all duration-300 hover:scale-105
+              "
+            />
+
+            <CarouselNext
+              className="
+                hidden lg:flex items-center justify-center
+                text-emerald-400 border border-emerald-400
+                hover:bg-emerald-400 hover:text-black
+                rounded-full
+                transition-all duration-300 hover:scale-105
+              "
+            />
+            {/* <CarouselPrevious className="hidden lg:block text-emerald-400 border-emerald-400 hover:bg-emerald-400 hover:text-black" />
+            <CarouselNext className="hidden lg:block text-emerald-400 border-emerald-400 hover:bg-emerald-400 hover:text-black" /> */}
           </Carousel>
         </div>
       </div>

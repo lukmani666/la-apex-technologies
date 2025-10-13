@@ -1,8 +1,10 @@
-import React from 'react'
+"use client"
+import React,{ useState }  from 'react'
 import Image from 'next/image';
 
 const CaseStudies = () => {
-   const projects = [
+  const [isLoaded, setIsLoaded] = useState(false);
+  const projects = [
     {
       title: "E-Commerce Platform Transformation",
       image: "/pic4.jpg",
@@ -60,12 +62,15 @@ const CaseStudies = () => {
                         transition-all duration-300 transform hover:scale-100 group h-full flex flex-col"
             >
               <div className="relative overflow-hidden h-60">
+
                 <Image
                   src={project.image} 
                   alt={project.title}
                   fill
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  onLoad={() => setIsLoaded(true)}
+                  className={`w-full h-48 object-cover group-hover:scale-110 transition-all duration-700 ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
                 />
+                
                 <div className="absolute top-4 left-4">
                   <span className="bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}

@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/app/components/ui/button';
 import { Card, CardContent } from '@/app/components/ui/card';
@@ -6,6 +7,7 @@ import { BarChart3, CheckCircle, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 const DataScience = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const features = [
     "Data mining and exploration",
     "Predictive analytics and modeling",
@@ -47,12 +49,13 @@ const DataScience = () => {
         {/* Image Section */}
         <section className="">
           <div className="container mx-auto px-6">
-            <div className="relative w-full max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-[50vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/data-science.jpg"
                 alt="Data Science & Analysis" 
                 fill
-                className="object-cover"
+                onLoad={() => setIsLoaded(true)}
+                className={`object-cover ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
                 priority
               />
             </div>

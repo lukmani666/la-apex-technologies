@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   const handleScheduleCall = () => {
-    // You can replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
+    // replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
     window.open('https://calendly.com', '_blank');
   };
 
