@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from '@/app/components/ui/button';
 import { 
   NavigationMenu, 
@@ -25,6 +26,7 @@ const Header = () => {
             alt='L.A. Apex Logo'
             width={120}
             height={120}
+            priority
           />
         </Link>
         
@@ -38,10 +40,13 @@ const Header = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-gray-800 border border-gray-700">
                   <div className="p-4 w-64">
-                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Software Development</Link>
-                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Data Science</Link>
-                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Automation</Link>
-                    <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Tech Consulting</Link>
+                    {["Software Development", "Data Science", "Automation", "Tech Consulting"].map((service) => (
+
+                      <Link key={service} href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">
+                        {service}
+                      </Link>
+                    ))}
+                    
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
@@ -58,48 +63,106 @@ const Header = () => {
         </Button>
 
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-white relative w-8 h-8 flex flex-col justify-center items-center z-50"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <div className="space-y-1">
-            <div className="w-6 h-0.5 bg-white"></div>
-            <div className="w-6 h-0.5 bg-white"></div>
-            <div className="w-6 h-0.5 bg-white"></div>
-          </div>
+          <motion.span
+            animate={isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="block w-6 h-0.5 bg-white rounded origin-center"
+          ></motion.span>
+          <motion.span
+            animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="block w-6 h-0.5 bg-white rounded my-1"
+          ></motion.span>
+          <motion.span
+            animate={isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="block w-6 h-0.5 bg-white rounded origin-center"
+          ></motion.span>
         </button>
       </div>
 
-      {isMenuOpen && (
-        <div className="lg:hidden bg-gray-800 border-t border-gray-700">
-          <nav className="flex flex-col space-y-4 p-4">
-            <a href="#home" className="text-gray-300 hover:text-emerald-400">Home</a>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-base cursor-pointer text-gray-300 hover:text-emerald-400 bg-transparent">
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-gray-800 border border-gray-700">
-                    <div className="p-4 w-64">
-                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Software Development</Link>
-                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Data Science</Link>
-                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Automation</Link>
-                      <Link href="/#services" className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded">Tech Consulting</Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-            <a href="#about" className="text-gray-300 hover:text-emerald-400">About</a>
-            <a href="#case-studies" className="text-gray-300 hover:text-emerald-400">Case Studies</a>
-            <a href="#testimonials" className="text-gray-300 hover:text-emerald-400">Testimonials</a>
-            <a href="#contact" className="text-gray-300 hover:text-emerald-400">Contact</a>
-            <Button className="bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold w-full mt-4">
-              Get a Free Consultation
-            </Button>
-          </nav>
-        </div>
-      )}
+      {/* Animated Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <>
+            {/* Background Overlay */}
+            <motion.div
+              key="overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black z-40 backdrop-blur-sm"
+              onClick={() => setIsMenuOpen(false)} // close when overlay clicked
+            />
+
+            {/* Slide-in Menu */}
+            <motion.div
+              key="mobileMenu"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 90, damping: 15 }}
+              className="fixed top-0 right-0 w-4/5 h-full bg-gray-900/95 border-l border-gray-700 shadow-2xl"
+            >
+              <nav className="flex flex-col space-y-6 p-8 pt-24 bg-gray-900/95">
+                <Link
+                  href="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-gray-300 text-lg hover:text-emerald-400 transition"
+                >
+                  Home
+                </Link>
+
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className="text-base cursor-pointer text-gray-300 hover:text-emerald-400 bg-transparent">
+                        Services
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent className="bg-gray-800 border border-gray-700">
+                        <div className="p-4 w-64">
+                          {["Software Development", "Data Science", "Automation", "Tech Consulting"].map((service, i) => (
+                            <Link
+                              key={i}
+                              href="/#services"
+                              onClick={() => setIsMenuOpen(false)}
+                              className="block px-3 py-2 text-gray-300 hover:text-emerald-400 hover:bg-gray-700 rounded"
+                            >
+                              {service}
+                            </Link>
+                          ))}
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <Link href="/#about" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                  About
+                </Link>
+                <Link href="/#case-studies" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                  Case Studies
+                </Link>
+                <Link href="/#testimonials" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                  Testimonials
+                </Link>
+                <Link href="/#contact" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                  Contact
+                </Link>
+
+                <Button className="bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold w-full mt-8 hover:from-emerald-600 hover:to-yellow-600">
+                  Get a Free Consultation
+                </Button>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
