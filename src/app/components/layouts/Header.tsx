@@ -146,16 +146,16 @@ const Header = () => {
                   </NavigationMenuList>
                 </NavigationMenu>
 
-                <Link href="/#about" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                <Link onClick={() => setIsMenuOpen(false)} href="/#about" className="text-gray-300 text-lg hover:text-emerald-400 transition">
                   About
                 </Link>
-                <Link href="/#case-studies" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                <Link onClick={() => setIsMenuOpen(false)} href="/#case-studies" className="text-gray-300 text-lg hover:text-emerald-400 transition">
                   Case Studies
                 </Link>
-                <Link href="/#testimonials" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                <Link onClick={() => setIsMenuOpen(false)} href="/#testimonials" className="text-gray-300 text-lg hover:text-emerald-400 transition">
                   Testimonials
                 </Link>
-                <Link href="/#contact" className="text-gray-300 text-lg hover:text-emerald-400 transition">
+                <Link onClick={() => setIsMenuOpen(false)} href="/#contact" className="text-gray-300 text-lg hover:text-emerald-400 transition">
                   Contact
                 </Link>
 
