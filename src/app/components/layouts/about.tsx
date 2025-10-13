@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { Lightbulb, Award, Heart, TrendingUp } from "lucide-react";
 import Image from "next/image";
 
@@ -14,6 +15,7 @@ const colors = {
 };
 
 const About = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const features = [
     { icon: Lightbulb, text: "Innovation", color: "emerald" },
     { icon: Award, text: "Excellence", color: "yellow" },
@@ -75,7 +77,8 @@ const About = () => {
                 src="/pic1.jpg"
                 alt="African tech professional working in modern office" 
                 fill
-                className="rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-500"
+                onLoad={() => setIsLoaded(true)}
+                className={`rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-500 ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-lg group-hover:opacity-0 transition-opacity duration-500"></div>
               {/* Floating elements */}

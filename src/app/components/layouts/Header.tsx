@@ -16,6 +16,10 @@ import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleScheduleCall = () => {
+    // replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
+    window.open('https://calendly.com', '_blank');
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-emerald-500/20">
@@ -58,7 +62,7 @@ const Header = () => {
           <Link href="/#contact" className="text-gray-300 hover:text-emerald-400 transition-colors">Contact</Link>
         </nav>
 
-        <Button className="hidden cursor-pointer lg:block bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold hover:from-emerald-600 hover:to-yellow-600">
+        <Button onClick={handleScheduleCall} className="hidden cursor-pointer lg:block bg-gradient-to-r from-emerald-500 to-yellow-500 text-black font-bold hover:from-emerald-600 hover:to-yellow-600">
           Get a Free Consultation
         </Button>
 
