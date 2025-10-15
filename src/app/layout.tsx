@@ -5,6 +5,7 @@ import Header from "./components/layouts/Header";
 import Providers from "./providers";
 import Footer from "./components/layouts/footer";
 import TopLoader from "./components/layouts/toplayout";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "L.A. Apex Technologies - Innovative Tech Solutions",
@@ -19,7 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <TopLoader />
+        <Suspense fallback={null}>
+          <TopLoader />
+        </Suspense>
         <Header />
         <Providers>
           <main>{children}</main>

@@ -176,7 +176,6 @@ html {
 
 #nprogress .bar {
   background: linear-gradient(to right, #facc15, #10b981);
-  /* background: red; */
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -185,7 +184,13 @@ html {
   height: 4px;
   border-radius: 0 0 2px 2px;
   box-shadow: 0 0 10px #10b98180;
-  transition: width 0.2s ease-out;
+  /* transition: width 0.2s ease-out; */
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+
+#nprogress.done .bar {
+  opacity: 0;
 }
 
 
