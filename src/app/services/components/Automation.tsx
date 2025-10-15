@@ -49,7 +49,7 @@ const Automation = () => {
         {/* Image Section */}
         <section className="">
           <div className="container mx-auto px-6">
-            <div className="relative w-full h-[50vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/automation.jpg"
                 alt="Automation & Scripting"
