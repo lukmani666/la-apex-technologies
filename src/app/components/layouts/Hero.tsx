@@ -61,7 +61,7 @@ const Hero = () => {
           
           {/* Right side - Tech person image */}
           <div className="relative animate-fade-in delay-700">
-            <div className="relative w-full h-[50vh] md:h-[80vh] lg:h-[90vh] group">
+            <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] group">
               <Image
                 src="/pic3.jpg" 
                 alt="African tech professional working with laptop" 

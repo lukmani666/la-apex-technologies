@@ -72,7 +72,7 @@ const About = () => {
           </div>
 
           <div className="w-full lg:w-1/2 animate-fade-in delay-700">
-            <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] group">
+            <div className="relative w-full h-[40vh] md:h-[60vh] lg:h-[70vh] group">
               <Image
                 src="/pic1.jpg"
                 alt="African tech professional working in modern office" 
