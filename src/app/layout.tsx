@@ -6,6 +6,7 @@ import Providers from "./providers";
 import Footer from "./components/layouts/footer";
 import TopLoader from "./components/layouts/toplayout";
 import { Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "L.A. Apex Technologies - Innovative Tech Solutions",
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main>{children}</main>
         </Providers>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
