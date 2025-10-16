@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import emailjs from "emailjs-com";
 import { Button } from '@/app/components/ui/button';
 import { Input } from '@/app/components/ui/input';
 import { Label } from '@/app/components/ui/label';
@@ -23,12 +24,37 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        process.env.NEXT_PUBLIC_EMAIL_API!
+      );
+
+      toast({
+        title: "Message Sent! ✅",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({name: "", email: "", service: "", message: ""});
+    } catch (error) {
+      console.error(error);
+      console.log("EmailJS Public Key:", process.env.EMAIL_API);
+      toast({
+        title: "Failed to Send ❌",
+        description: "Please check your network or try again later.",
+      });
+    }
   };
 
   const handleScheduleCall = () => {
