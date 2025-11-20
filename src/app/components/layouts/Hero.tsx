@@ -64,7 +64,7 @@ const Hero = () => {
           <div className="relative animate-fade-in delay-700">
             <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] group">
               <Image
-                src="/pic3.jpg" 
+                src="/pic3-min.jpg" 
                 alt="African tech professional working with laptop" 
                 fill
                 onLoad={() => setIsLoaded(true)}
