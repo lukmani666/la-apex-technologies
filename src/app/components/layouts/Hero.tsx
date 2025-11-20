@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 flex items-center justify-center relative overflow-hidden">
       {/* Animated background particles */}
@@ -67,7 +68,13 @@ const Hero = () => {
                 alt="African tech professional working with laptop" 
                 fill
                 onLoad={() => setIsLoaded(true)}
-                className={`rounded-2xl shadow-2xl transform group-hover:scale-100 transition-all duration-500 ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
+                className={`rounded-2xl shadow-2xl transform group-hover:scale-100 transition-all duration-700 object-cover ${
+                  isLoaded ? "blur-0 scale-100" : "blur-md scale-105"
+                }`}
+                style={{
+                  opacity: isLoaded ? 1 : 0,
+                  transition: 'opacity 0.7s ease-in-out, filter 0.7s ease-in-out, transform 0.7s ease-in-out'
+                }}
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-2xl group-hover:opacity-0 transition-opacity duration-500"></div>

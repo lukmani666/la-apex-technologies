@@ -63,7 +63,10 @@ const Testimonials = () => {
                           alt={testimonial.name}
                           fill
                           onLoad={() => setIsLoaded(true)}
-                          className={`rounded-full object-cover ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
+                          className={`rounded-full object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
+                          style={{
+                            opacity: isLoaded ? 1 : 0
+                          }}
                         />
                       </div>
                       <div>

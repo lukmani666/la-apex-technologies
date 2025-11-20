@@ -68,7 +68,11 @@ const CaseStudies = () => {
                   alt={project.title}
                   fill
                   onLoad={() => setIsLoaded(true)}
-                  className={`w-full h-48 object-cover group-hover:scale-110 transition-all duration-700 ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
+                  className={`w-full h-48 object-cover group-hover:scale-110 transition-all duration-700 ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
+                  style={{
+                    opacity: isLoaded ? 1 : 0
+                  }}
+                  priority
                 />
                 
                 <div className="absolute top-4 left-4">

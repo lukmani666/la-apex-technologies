@@ -78,7 +78,12 @@ const About = () => {
                 alt="African tech professional working in modern office" 
                 fill
                 onLoad={() => setIsLoaded(true)}
-                className={`rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-500 ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
+                className={`rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-700 object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
+                style={{
+                  opacity: isLoaded ? 1 : 0,
+                  transition: 'opacity 0.7s ease-in-out, filter 0.7s ease-in-out, transform 0.7s ease-in-out'
+                }}
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-lg group-hover:opacity-0 transition-opacity duration-500"></div>
               {/* Floating elements */}
