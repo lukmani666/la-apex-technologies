@@ -55,7 +55,7 @@ const TechConsulting = () => {
                 alt="Tech Consulting" 
                 fill
                 onLoad={() => setIsLoaded(true)}
-                className={`object-cover ${isLoaded ? "blur-0 opacity-100": "blur-lg opacity-100"}`}
+                className={`object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
                 priority
               />
             </div>
