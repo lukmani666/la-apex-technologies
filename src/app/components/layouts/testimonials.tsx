@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react"
+import React from "react"
 import { 
   Carousel,
   CarouselContent,
@@ -7,10 +7,9 @@ import {
   CarouselNext,
   CarouselPrevious
 } from "../ui/carousel"
-import Image from "next/image";
+import { OptimizedImage } from "../ui/optimized-image";
 
 const Testimonials = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -58,15 +57,11 @@ const Testimonials = () => {
                   <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-emerald-500/20 h-full">
                     <div className="flex items-center mb-6">
                       <div className="relative w-16 h-16 mr-4">
-                        <Image
+                        <OptimizedImage
                           src={testimonial.image}
                           alt={testimonial.name}
                           fill
-                          onLoad={() => setIsLoaded(true)}
-                          className={`rounded-full object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
-                          style={{
-                            opacity: isLoaded ? 1 : 0
-                          }}
+                          className="rounded-full object-cover"
                         />
                       </div>
                       <div>

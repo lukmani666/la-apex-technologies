@@ -1,7 +1,7 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import { Lightbulb, Award, Heart, TrendingUp } from "lucide-react";
-import Image from "next/image";
+import { OptimizedImage } from "@/app/components/ui/optimized-image";
 
 const colors = {
   emerald: {
@@ -15,7 +15,6 @@ const colors = {
 };
 
 const About = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const features = [
     { icon: Lightbulb, text: "Innovation", color: "emerald" },
     { icon: Award, text: "Excellence", color: "yellow" },
@@ -73,16 +72,11 @@ const About = () => {
 
           <div className="w-full lg:w-1/2 animate-fade-in delay-700">
             <div className="relative w-full h-[40vh] md:h-[60vh] lg:h-[70vh] group">
-              <Image
+              <OptimizedImage
                 src="/pic1.jpg"
                 alt="African tech professional working in modern office" 
                 fill
-                onLoad={() => setIsLoaded(true)}
-                className={`rounded-lg shadow-xl transform group-hover:scale-100 transition-all duration-700 object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
-                style={{
-                  opacity: isLoaded ? 1 : 0,
-                  transition: 'opacity 0.7s ease-in-out, filter 0.7s ease-in-out, transform 0.7s ease-in-out'
-                }}
+                className="rounded-lg shadow-xl object-cover group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-lg group-hover:opacity-0 transition-opacity duration-500"></div>
