@@ -1,13 +1,11 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/app/components/ui/button';
 import { ArrowDown, Play, Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { OptimizedImage } from '@/app/components/ui/optimized-image';
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 flex items-center justify-center relative overflow-hidden">
       {/* Animated background particles */}
@@ -63,18 +61,11 @@ const Hero = () => {
           {/* Right side - Tech person image */}
           <div className="relative animate-fade-in delay-700">
             <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] group">
-              <Image
+              <OptimizedImage
                 src="/pic3-min.jpg" 
                 alt="African tech professional working with laptop" 
                 fill
-                onLoad={() => setIsLoaded(true)}
-                className={`rounded-2xl shadow-2xl transform group-hover:scale-100 transition-all duration-700 object-cover ${
-                  isLoaded ? "blur-0 scale-100" : "blur-md scale-105"
-                }`}
-                style={{
-                  opacity: isLoaded ? 1 : 0,
-                  transition: 'opacity 0.7s ease-in-out, filter 0.7s ease-in-out, transform 0.7s ease-in-out'
-                }}
+                className="rounded-2xl shadow-2xl object-cover group-hover:scale-105"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-yellow-500/20 rounded-2xl group-hover:opacity-0 transition-opacity duration-500"></div>

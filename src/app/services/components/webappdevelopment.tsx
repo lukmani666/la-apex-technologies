@@ -1,13 +1,12 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/app/components/ui/button';
 import { Card, CardContent } from '@/app/components/ui/card';
 import { Globe, CheckCircle, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { OptimizedImage } from '@/app/components/ui/optimized-image';
 
 const WebAppDevelopment = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const features = [
     "Responsive web design",
     "Progressive web apps (PWA)",
@@ -50,12 +49,11 @@ const WebAppDevelopment = () => {
         <section className="">
           <div className="container mx-auto px-6">
             <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
+              <OptimizedImage
                 src="/web-app-development.jpg"
                 alt="Web & App Development" 
                 fill
-                onLoad={() => setIsLoaded(true)}
-                className={`object-cover ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
+                className="object-cover"
                 priority
               />
             </div>

@@ -1,9 +1,8 @@
 "use client"
-import React,{ useState }  from 'react'
-import Image from 'next/image';
+import React from 'react'
+import { OptimizedImage } from '@/app/components/ui/optimized-image';
 
 const CaseStudies = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const projects = [
     {
       title: "E-Commerce Platform Transformation",
@@ -62,16 +61,11 @@ const CaseStudies = () => {
                         transition-all duration-300 transform hover:scale-100 group h-full flex flex-col"
             >
               <div className="relative overflow-hidden h-60">
-
-                <Image
+                <OptimizedImage
                   src={project.image} 
                   alt={project.title}
                   fill
-                  onLoad={() => setIsLoaded(true)}
-                  className={`w-full h-48 object-cover group-hover:scale-110 transition-all duration-700 ${isLoaded ? "blur-0 scale-100" : "blur-md scale-105"}`}
-                  style={{
-                    opacity: isLoaded ? 1 : 0
-                  }}
+                  className="object-cover group-hover:scale-110"
                   priority
                 />
                 
