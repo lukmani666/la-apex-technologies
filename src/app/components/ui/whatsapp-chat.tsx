@@ -7,7 +7,7 @@ import Image from 'next/image';
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
-  const whatsappNumber = '2348067543280'; // Format: country code + number without +
+  const whatsappNumber = '2348054325762';
 
   const defaultMessage = "Hi, welcome to L.A. Apex Technologies, how can we help you today? 😊";
 
