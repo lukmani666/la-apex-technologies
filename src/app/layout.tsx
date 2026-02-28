@@ -5,6 +5,7 @@ import Header from "./components/layouts/Header";
 import Providers from "./providers";
 import Footer from "./components/layouts/footer";
 import TopLoader from "./components/layouts/toplayout";
+import WhatsAppChat from "./components/ui/whatsapp-chat";
 import { Suspense } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -29,6 +30,7 @@ export default function RootLayout({
           <main>{children}</main>
         </Providers>
         <Footer />
+        <WhatsAppChat />
         <SpeedInsights />
       </body>
     </html>
