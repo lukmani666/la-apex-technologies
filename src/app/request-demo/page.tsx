@@ -15,7 +15,7 @@ const RequestDemo = () => {
   const router = useRouter();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    firstName: '',
+    name: '',
     lastName: '',
     email: '',
     company: '',
@@ -48,7 +48,7 @@ const RequestDemo = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID!,
         process.env.NEXT_PUBLIC_TEMPLATE_ID!,
         {
-          firstname: formData.firstName,
+          firstname: formData.name,
           lastname: formData.lastName,
           email: formData.email,
           company: formData.company,
@@ -62,7 +62,7 @@ const RequestDemo = () => {
       );
 
       // Redirect to confirmation page with form data
-      const confirmationUrl = `/confirmation?name=${encodeURIComponent(`${formData.firstName} ${formData.lastName}`)}&email=${encodeURIComponent(formData.email)}&service=consultation&date=${encodeURIComponent(new Date().toISOString().split('T')[0])}&time=${encodeURIComponent(new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }))}`;
+      const confirmationUrl = `/confirmation?name=${encodeURIComponent(`${formData.name} ${formData.lastName}`)}&email=${encodeURIComponent(formData.email)}&service=consultation&date=${encodeURIComponent(new Date().toISOString().split('T')[0])}&time=${encodeURIComponent(new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }))}`;
       
       router.push(confirmationUrl);
 
@@ -107,7 +107,7 @@ const RequestDemo = () => {
                     <Input
                       id="firstName"
                       name="firstName"
-                      value={formData.firstName}
+                      value={formData.name}
                       onChange={handleChange}
                       required
                       className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 focus:border-emerald-500"
