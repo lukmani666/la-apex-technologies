@@ -28,16 +28,16 @@ const Footer = () => {
               software development, data intelligence, and automation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=100084802967943" target='blank' className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://x.com/LAApextech" target='blank' className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="https://www.linkedin.com/company/la-apex-technologies" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://www.linkedin.com/company/la-apex-technologies" target='blank' className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
+              <a href="https://www.instagram.com/laapextechnologies" target='blank' className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors">
                 <Instagram size={18} />
               </a>
             </div>

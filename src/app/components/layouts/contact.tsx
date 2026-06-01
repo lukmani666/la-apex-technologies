@@ -47,9 +47,9 @@ const Contact = () => {
       });
 
       setFormData({name: "", email: "", service: "", message: ""});
-    } catch (error) {
-      console.error(error);
-      console.log("EmailJS Public Key:", process.env.EMAIL_API);
+    } catch {
+      // console.error(error);
+      // console.log("EmailJS Public Key:", process.env.EMAIL_API);
       toast({
         title: "Failed to Send ❌",
         description: "Please check your network or try again later.",
@@ -58,8 +58,7 @@ const Contact = () => {
   };
 
   const handleScheduleCall = () => {
-    // replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
-    window.open('https://calendly.com', '_blank');
+    window.open('https://calendly.com/laapextechnologies/30min', '_blank');
   };
 
   return (

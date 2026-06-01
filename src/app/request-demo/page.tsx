@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'
 import { Button } from '@/app/components/ui/button';
 import { Input } from '@/app/components/ui/input';
 import { Label } from '@/app/components/ui/label';
@@ -38,27 +39,54 @@ const RequestDemo = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Demo request submitted:', formData);
-    
-    toast({
-      title: "Demo Request Received!",
-      description: "We'll contact you shortly to schedule your personalized demo.",
-    });
+    // console.log('Demo request submitted:', formData);
 
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      company: '',
-      phone: '',
-      companySize: '',
-      industry: '',
-      message: ''
-    });
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        {
+          firstname: formData.firstName,
+          lastname: formData.lastName,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          companysize: formData.companySize,
+          industry: formData.industry,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        process.env.NEXT_PUBLIC_EMAIL_API!
+      );
+
+      toast({
+        title: "Demo Request Received!",
+        description: "We'll contact you shortly to schedule your personalized demo.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        companySize: '',
+        industry: '',
+        message: ''
+      });
+
+    } catch {
+      toast({
+        title: "Failed to Send ❌",
+        description: "Please check your network or try again later.",
+      });
+    }
   };
+    
+    
 
   return (
     <div className="min-h-screen bg-gray-900">
