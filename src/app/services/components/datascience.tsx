@@ -50,7 +50,7 @@ const DataScience = () => {
           <div className="container mx-auto px-6">
             <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
               <OptimizedImage
-                src="/data-science.jpg"
+                src="/data-vs.jpg"
                 alt="Data Science & Analysis" 
                 fill
                 className="object-cover"

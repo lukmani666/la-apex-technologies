@@ -17,8 +17,7 @@ import Link from 'next/link';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleScheduleCall = () => {
-    // replace this URL with your actual scheduling link (Calendly, Cal.com, etc.)
-    window.open('https://calendly.com', '_blank');
+    window.open('https://calendly.com/laapextechnologies/30min', '_blank');
   };
 
   return (

@@ -26,7 +26,7 @@ const Statistics = () => {
       icon: Users,
       label: "Happy Clients",
       value: 490,
-      suffix: "K+",
+      suffix: "+",
       color: "yellow"
     },
     {
@@ -85,10 +85,10 @@ const Statistics = () => {
       if (step >= steps) {
         clearInterval(timer);
         setCounts({
-          projects: 236,
-          clients: 490,
+          projects: 100,
+          clients: 50,
           rating: 4.9,
-          team: 25
+          team: 10
         });
       }
     }, stepDuration)

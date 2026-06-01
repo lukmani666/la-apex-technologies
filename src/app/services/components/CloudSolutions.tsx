@@ -51,7 +51,7 @@ const CloudSolutions = () => {
           <div className="container mx-auto px-6">
             <div className="relative w-full h-[40vh] md:h-[80vh] lg:h-[90vh] max-w-5xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl">
               <OptimizedImage
-                src="/cloud-solutions.jpg"
+                src="/cloud.jpg"
                 alt="Cloud Solutions"
                 fill
                 className="object-cover"
