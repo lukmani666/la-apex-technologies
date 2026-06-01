@@ -61,22 +61,10 @@ const RequestDemo = () => {
         process.env.NEXT_PUBLIC_EMAIL_API!
       );
 
-      toast({
-        title: "Demo Request Received!",
-        description: "We'll contact you shortly to schedule your personalized demo.",
-      });
-
-      // Reset form
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        companySize: '',
-        industry: '',
-        message: ''
-      });
+      // Redirect to confirmation page with form data
+      const confirmationUrl = `/confirmation?name=${encodeURIComponent(`${formData.firstName} ${formData.lastName}`)}&email=${encodeURIComponent(formData.email)}&service=consultation&date=${encodeURIComponent(new Date().toISOString().split('T')[0])}&time=${encodeURIComponent(new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }))}`;
+      
+      router.push(confirmationUrl);
 
     } catch {
       toast({
