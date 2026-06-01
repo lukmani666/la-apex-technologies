@@ -7,8 +7,10 @@ import { Label } from '@/app/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/app/components/ui/tabs';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useToast } from '@/app/hooks/use-toast';
+import { useRouter } from 'next/navigation';
 
 const Contact = () => {
+  const router = useRouter();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
@@ -40,6 +42,11 @@ const Contact = () => {
         },
         process.env.NEXT_PUBLIC_EMAIL_API!
       );
+
+      // Redirect to confirmation page with form data
+      const confirmationUrl = `/confirmation?name=${encodeURIComponent(`${formData.name}`)}&email=${encodeURIComponent(formData.email)}&service=consultation&date=${encodeURIComponent(new Date().toISOString().split('T')[0])}&time=${encodeURIComponent(new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }))}`;
+      
+      router.push(confirmationUrl);
 
       toast({
         title: "Message Sent! ✅",
