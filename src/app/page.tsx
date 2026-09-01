@@ -5,7 +5,7 @@ import CTABanner from './components/layouts/ctabanner';
 import Hero from './components/layouts/Hero';
 import Services from './components/layouts/services';
 import Statistics from './components/layouts/statistics';
-import Testimonials from './components/layouts/testimonials';
+// import Testimonials from './components/layouts/testimonials';
 import WhyChooseUs from './components/layouts/whychooseus';
 export default function Home() {
    return (
