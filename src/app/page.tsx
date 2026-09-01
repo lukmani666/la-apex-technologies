@@ -17,7 +17,7 @@ export default function Home() {
       <WhyChooseUs />
       <Statistics />
       <CaseStudies />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTABanner />
       <Contact />
     </div>
